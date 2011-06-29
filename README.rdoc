@@ -1,0 +1,39 @@
+= SYP Scraper
+
+== Intro
+
+This little app is made to scrape the Swiss Yellow Pages (SYP - http://yellow.local.ch).
+
+Please us this app in your quest to save humanity, not in your evil plots to take over the world! 
+Feel free to fork and enhance this project.
+
+NOTE: I WON'T PROVIDE ANY SUPPORT ON INSTALLING AND RUNNING THIS SCRIPT.
+
+== Usage
+
+Initialize object with industry sector (check the advanced search on SYP to find one that suits you)
+and the maximum number of available result-pages (check the pagination SYP search result)
+as parameters. If successful an array of hashes is returned, else it returns false.
+
+== Author
+
+javier@a-team.ch 
+
+== Copyright
+
+Copyright 2011, Javier Vazquez
+
+== License
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
