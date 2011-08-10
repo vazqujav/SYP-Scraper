@@ -73,6 +73,22 @@ class SYPScraper
     end
   end
   
+  def get_yp_csv(my_filename)
+    self.yp_data.flatten!
+    if self.yp_data.empty? == false
+      my_csv = "Name,Street,ZIP,City,URL,Phone\r"
+      self.yp_data.each do |my_line|
+        my_csv << "#{my_line[:name]},#{my_line[:street]},#{my_line[:zip]},#{my_line[:city]},#{my_line[:url]},#{my_line[:phone]}\r"
+      end
+      csv_file = File.new("#{my_filename}", "w:utf-8")
+      csv_file.write(my_csv)
+      csv_file.close
+      return true
+    else
+      return false
+    end
+  end
+  
   # normalize strings found at SYP
   def normalize_yp_string(my_string)
     # because div.you-b isn't unique, we get duplicate entries. get rid of them.
@@ -109,4 +125,4 @@ class SYPScraper
 end
 
 my_data = SYPScraper.new("Astronomy", 1)
-puts my_data.get_yp_data
+my_data.get_yp_csv("output.csv")
